@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %}
+<h2>Admin Panel</h2>
+<form action="/admin" method="POST">
+  <label for="password">Enter admin password:</label>
+  <input type="password" name="password" id="password" />
+  <button type="submit">Login</button>
+</form>
+
+{% if summary %}
+<h3>Sales Summary:</h3>
+<ul>
+  {% for pizza, count in summary.items() %}
+  <li>{{ pizza }}: {{ count }} sold</li>
+  {% endfor %}
+</ul>
+{% endif %} {% endblock %}

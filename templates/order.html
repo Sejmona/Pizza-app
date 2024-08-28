@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+<h2>Create Your Order</h2>
+<form action="/order" method="POST">
+  <label for="pizza">Choose a pizza:</label>
+  <select name="pizza" id="pizza">
+    <option value="margherita">Margherita</option>
+    <option value="pepperoni">Pepperoni</option>
+    <option value="custom">Custom Pizza</option>
+  </select>
+
+  <label for="toppings">Choose toppings:</label>
+  <input type="checkbox" name="toppings" value="extra_cheese" /> Extra Cheese
+  <input type="checkbox" name="toppings" value="mushrooms" /> Mushrooms
+  <input type="checkbox" name="toppings" value="peppers" /> Peppers
+
+  <button type="submit">Add to Order</button>
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+<h2>Payment</h2>
+<p>Order Summary: {{ order_summary }}</p>
+<p>Total: ${{ total }}</p>
+
+<form action="/payment" method="POST">
+  <label for="payment_method">Choose payment method:</label>
+  <select name="payment_method" id="payment_method">
+    <option value="credit_card">Credit Card</option>
+    <option value="cash">Cash</option>
+  </select>
+  <button type="submit">Pay</button>
+</form>
+{% endblock %}
