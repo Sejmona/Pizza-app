@@ -2,13 +2,24 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-image: url('https://amarepizza.cz/components/heroes/01/images/hero-background.jpg');
+  background-size: 100%;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
   background-color: #f4f4f4;
+
+  color: #333;
+
 }
 
 header {
   background-color: #333;
   color: #fff;
-  padding: 1em;
+  padding: 20px;
+  margin: 70px;
   text-align: center;
 }
 
@@ -19,5 +30,10 @@ nav a {
 }
 
 main {
+
+  background-color: #333;
+  color: #fff;
+  text-align: center;
   padding: 2em;
+  margin: 70px;
 }

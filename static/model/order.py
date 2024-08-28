@@ -1,12 +1,16 @@
 class Order:
     def __init__(self):
-        self.pizzas = []
+        self.items = []
 
-    def add_pizza(self, pizza):
-        self.pizzas.append(pizza)
+    def add_item(self, pizza):
+        self.items.append(pizza)
 
-    def get_total(self):
-        return sum(pizza.price for pizza in self.pizzas)
+    def clear_order(self):
+        self.items = []
 
-    def __str__(self):
-        return "\n".join([str(pizza) for pizza in self.pizzas])
+    def get_summary(self):
+        summary = "\n".join([str(item) for item in self.items])
+        return summary if summary else "No items in the order."
+
+    def is_empty(self):
+        return len(self.items) == 0

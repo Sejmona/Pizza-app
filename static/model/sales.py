@@ -1,13 +1,12 @@
 class Sales:
     def __init__(self):
-        self.sales_data = []
+        self.sales = []
 
     def record_sale(self, order):
-        self.sales_data.append(order)
+        self.sales.append(order)
+        order.pizzas.clear()  # Vyprázdnění objednávky po zaplacení
 
     def get_sales_summary(self):
-        summary = {}
-        for order in self.sales_data:
-            for pizza in order.pizzas:
-                summary[pizza.name] = summary.get(pizza.name, 0) + 1
-        return summary
+        summary = [str(order) for order in self.sales]
+        return '\n'.join(summary)
+
